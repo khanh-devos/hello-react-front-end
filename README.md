@@ -49,7 +49,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **click and see the nobelists at each country and city**
+- **connect with a rails api**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +161,7 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Styling the page of city**
+- **Styling**
 - **Add animation**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
