@@ -14,9 +14,7 @@ export const fetchGreeting = createAsyncThunk(
   async (name, thunkApi) => {
     try {
       const res = await axios.get(URL_MISSIONS);
-      console.log('here')
       return res.data;
-
     } catch (err) {
       return thunkApi.rejectWithValue('something wrong!');
     }
@@ -44,6 +42,5 @@ const greetingSlice = createSlice({
       }));
   },
 });
-
 
 export default greetingSlice.reducer;

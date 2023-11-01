@@ -1,25 +1,25 @@
-
 import './App.css';
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  BrowserRouter, Routes, Route, NavLink,
+} from 'react-router-dom';
 
 import { fetchGreeting } from './redux/greetingSlice';
 import Greeting from './components/Greeting';
 
 function App() {
-  const dispatch = useDispatch()
-  const isLoading = useSelector((state) => state.greeting.isLoading );
-
+  const dispatch = useDispatch();
+  const isLoading = useSelector((state) => state.greeting.isLoading);
 
   useEffect(() => {
     dispatch(fetchGreeting());
   }, [dispatch]);
 
-  if (isLoading) return (<h3>Loading</h3>)
+  if (isLoading) return (<h3>Loading</h3>);
 
   return (
-    <div >
+    <div>
       <BrowserRouter>
         <div className="routes-container">
 
@@ -27,13 +27,13 @@ function App() {
           <NavLink to="/greeting">Greeting</NavLink>
 
         </div>
-      <Routes>
-        <Route path="/"/>
-        <Route path="/greeting" element={<Greeting />} />
+        <Routes>
+          <Route path="/" />
+          <Route path="/greeting" element={<Greeting />} />
 
-      </Routes>
-    
-    </BrowserRouter>
+        </Routes>
+
+      </BrowserRouter>
     </div>
   );
 }
