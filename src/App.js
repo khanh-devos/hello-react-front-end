@@ -1,16 +1,12 @@
 import './App.css';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  BrowserRouter, Routes, Route, NavLink,
-} from 'react-router-dom';
 
 import { fetchGreeting } from './redux/greetingSlice';
-import Greeting from './components/Greeting';
 
 function App() {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.greeting.isLoading);
+  const { isLoading, message } = useSelector((state) => state.greeting);
 
   useEffect(() => {
     dispatch(fetchGreeting());
@@ -20,20 +16,9 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
-        <div className="routes-container">
-
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/greeting">Greeting</NavLink>
-
-        </div>
-        <Routes>
-          <Route path="/" />
-          <Route path="/greeting" element={<Greeting />} />
-
-        </Routes>
-
-      </BrowserRouter>
+      <p>
+        {`Greeting: ${message}`}
+      </p>
     </div>
   );
 }
