@@ -30,7 +30,7 @@
 # 📖 [About the project] <a name="about-project"></a>
 
 **Hello-react-front-end** is a front end page for the [back end API](http://127.0.0.1:3100/) to retrieve a random message and show it.
-- [back-end git link](https://github.com/khanh-devos/hello-rails-back-end)
+- [back-end PR git link](https://github.com/khanh-devos/hello-rails-back-end/pull/1)
 
 
 ## 🛠 Built With <a name="built-with"></a>
